@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.app {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.sidebar {
+  flex-shrink: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: aliceblue;
+}
+
+/* MEDIA QUERIES FOR DESKTOP */
+@media only screen and (min-width: 600px) {
+  .content {
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  .sidebar-toggle,
+  .close-toggle {
+    display: none;
+  }
+}
+
+
+/* MEDIA QUERIES FOR MOBILE */
+
+@media only screen and (max-width: 599px) {
+  .open {
+    z-index: 100;
+  }
+
+  .close {
+    display: none;
+  }
+
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

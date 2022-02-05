@@ -1,0 +1,19 @@
+.sidebar-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 8px;
+  padding: 0;
+  background-color: #93f1ca;
+  border: none;
+}
+
+.close-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 8px;
+  padding: 0;
+  background-color: #e7f3a4;
+  border: none;
+}
