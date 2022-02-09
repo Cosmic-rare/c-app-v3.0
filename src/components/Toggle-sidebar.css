@@ -21,6 +21,9 @@
   list-style: none;
   margin-left: 6px;
   font-size: 17px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .list-item::before {
