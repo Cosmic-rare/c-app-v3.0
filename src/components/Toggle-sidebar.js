@@ -4,7 +4,10 @@ import "./Toggle-sidebar.css"
 const Toggle = (props) => {
   const [isOpen, setIsOpen] = useState(true)
   const {
-    message
+    message,
+    contents,
+    setSelected,
+    changeIsOpen
   } = props
 
   return (
@@ -21,7 +24,19 @@ const Toggle = (props) => {
       </div>
 
       <div className={isOpen ? "sidebarToggle-children open" : "sidebarToggle-children close"}>
-        {props.children}
+        {contents.map((value) => {
+          return (
+            <li
+              className="list-item"
+              onClick={() => {
+                setSelected(value)
+                changeIsOpen()
+              }}
+            >
+              {value}
+            </li>
+          )
+        })}
       </div>
     </div>
   )

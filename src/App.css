@@ -24,6 +24,26 @@ body {
   padding: 10px;
 }
 
+.openButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 8px;
+  padding: 0;
+  background-color: #93f1ca;
+  border: none;
+}
+
+.closeButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 8px;
+  padding: 0;
+  background-color: #e7f3a4;
+  border: none;
+}
+
 /* MEDIA QUERIES FOR DESKTOP */
 @media only screen and (min-width: 600px) {
   .content {
@@ -31,8 +51,8 @@ body {
     width: 100%;
   }
 
-  .sidebar-toggle,
-  .close-toggle {
+  .openButton,
+  .closeButton {
     display: none;
   }
 }

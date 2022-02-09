@@ -1,16 +1,16 @@
-import "./Content.css"
-
 const Content = (props) => {
   const {
-    changeIsOpen
+    changeIsOpen,
+    selected
   } = props
 
   return (
     <div className="content">
       <button
-        className="sidebar-toggle"
+        className="openButton"
         onClick={changeIsOpen}
       />
+      <p>{selected}</p>
     </div>
   )
 }

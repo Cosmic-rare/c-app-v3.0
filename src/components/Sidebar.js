@@ -1,49 +1,21 @@
-import Toggle from "./Sidebar-toggle"
+import Toggle from "./Toggle-sidebar"
 
 const Sidebar = (props) => {
   const {
     isOpen,
-    changeIsOpen
+    changeIsOpen,
+    setSelected,
+    channels,
+    directMessages
   } = props
-
-  const channels = [
-    "雑談1",
-    "雑談2",
-    "音ゲーマー",
-    "アンケート",
-    "プロセカ",
-    "勉強の相談"
-  ]
-
-  const directMessages = [
-    "谷さん1号",
-    "谷さん2号",
-    "谷さん3号"
-  ]
 
   return (
     <div className={isOpen ? "sidebar open" : "sidebar close"}>
-      <button className="close-toggle" onClick={changeIsOpen}>X</button>
+      <button className="closeButton" onClick={changeIsOpen}>X</button>
 
-      <Toggle message={"Channles"}>
-        {channels.map((value) => {
-          return (
-            <li className="list-item">
-              {value}
-            </li>
-          )
-        })}
-      </Toggle>
+      <Toggle message={"Channles"} contents={channels} setSelected={setSelected} changeIsOpen={changeIsOpen} />
 
-      <Toggle message={"DirectMessages"}>
-        {directMessages.map((value) => {
-          return (
-            <li className="list-item">
-              {value}
-            </li>
-          )
-        })}
-      </Toggle>
+      <Toggle message={"DirectMessages"} contents={directMessages} setSelected={setSelected} changeIsOpen={changeIsOpen} />
 
     </div>
   )
