@@ -7,6 +7,7 @@
 .sidebarToggle {
   margin-top: 7px;
   padding: 4px;
+  user-select: none;
 }
 
 .sidebarToggle-flex:hover {
