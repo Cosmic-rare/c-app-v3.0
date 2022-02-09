@@ -21,6 +21,7 @@ body {
   width: 250px;
   height: 100vh;
   background-color: aliceblue;
+  padding: 10px;
 }
 
 /* MEDIA QUERIES FOR DESKTOP */
